@@ -1,0 +1,192 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background: linear-gradient(to right, #434343, #232323);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+/* Update the navigation styles as well */
+nav {
+    background: linear-gradient(to right, #232323, #434343);
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0.9; /* Set the opacity to make it semi-transparent */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+    font-size: 18px;
+    padding: 0 15px; /* Add padding to the links */
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #ffd700;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffd700;
+    font-size: 20px;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #ff43;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    margin-top: auto;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Center images with a bounce animation */
+img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: auto;
+    animation: bounce 1s ease infinite;
+}
+
+/* Center form with a scale animation */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    animation: scaleUp 1s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+label, input, textarea {
+    margin: 10px 0;
+}
+
+/* Gradient background and pulse animation for the button */
+button {
+    background: linear-gradient(to right, #333, #555);
+    color: #fff;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    animation: pulse 1.5s ease infinite;
+}
+
+button:hover {
+    background: linear-gradient(to right, #555, #777);
+    transform: scale(1.05);
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* Video container styles */
+#productVideoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#productVideo {
+    width: 100%;
+    height: auto;
+}
+
+/* Bounce animation keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
